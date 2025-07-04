@@ -11,7 +11,7 @@
 
 > [!NOTE]
 >
-> 在开始之前，你需要先按照 [NodeJS](https://nodejs.org/en/download) 和 [pnpm](https://pnpm.io/installation)。
+> 在开始之前，你需要先安装 [NodeJS](https://nodejs.org/en/download) 和 [pnpm](https://pnpm.io/installation)。
 
 ## 开始
 
