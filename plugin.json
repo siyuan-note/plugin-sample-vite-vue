@@ -11,23 +11,22 @@
     "all"
   ],
   "displayName": {
-    "default": "zh_CN",
+    "default": "plugin-sample-vite-vue",
     "en_US": "plugin-sample-vite-vue",
     "zh_CN": "plugin-sample-vite-vue"
   },
   "description": {
-    "default": "zh_CN",
+    "default": "plugin-sample-vite-vue",
     "en_US": "plugin-sample-vite-vue",
     "zh_CN": "plugin-sample-vite-vue"
   },
   "readme": {
-    "default": "zh_CN",
+    "default": "README.md",
     "en_US": "README.md",
     "zh_CN": "README_zh_CN.md"
   },
   "funding": {
-    "custom": [
-    ]
+    "custom": []
   },
   "keywords": []
 }
