@@ -13,6 +13,12 @@
 >
 > Before your start, you need install [NodeJS](https://nodejs.org/en/download) and [pnpm](https://pnpm.io/installation) first.
 
+> [!WARNING]
+>
+> For your first attempt, please do not modify anything. Load the plugin template in Siyuan as described below before making any changes.
+>
+> For example, deleting README_zh_CN.md will also cause the plugin to fail to load.
+
 ## Get started
 
 1. Use the `Use the template` button to make a copy of this repo as template.  
@@ -29,10 +35,11 @@
 
 > [!TIP]
 >
-> If you don't like build the project into your workspace, you can use `Symbolic Link` to link the folder.
+> If you prefer not to package the project directly into the workspace, you can use a `symbolic link` instead.
 >
-> Set `VITE_DEV_DIST_DIR` to any folder, and use `Symbolic Link` to link `siyuan_workspace/data/plugins/your_plugin_name` to `VITE_DEV_DIST_DIR`.
-
+> Writing directly into the Siyuan workspace allows you to sync via Siyuan's sync feature to other devices, while using a symbolic link will not be included in the sync.
+>
+> This template does not provide specific details about symbolic links. For related information, please refer to [plugin-sample-vite-svelte](https://github.com/siyuan-note/plugin-sample-vite-svelte).
 
 5. Use `pnpm dev` to run the project, you will see info like below
 

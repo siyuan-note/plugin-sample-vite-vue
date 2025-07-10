@@ -20,6 +20,12 @@
 >
 > 请注意库名和插件名称一致，默认分支必须为 `main`.
 
+> [!WARNING]
+>
+> 初次尝试，请不要修改任何内容，直接通过下述方式，成功在思源里加载插件模板以后，再进行调整。
+>
+> 例如删除 README_zh_CN.md 也会导致插件加载不成功。
+
 
 2. 使用 `git clone` 克隆创建好的仓库。
 3. 使用 `pnpm i` 安装项目所需的依赖。
@@ -31,7 +37,10 @@
 >
 > 如果你不喜欢将项目打包至工作空间中，可以使用 `软链接` 的方式。
 >
-> 设置 `VITE_DEV_DIST_DIR` 为任意文件夹，然后使用 `软链接` 链接 `siyuan_workspace/data/plugins/your_plugin_name` 目录到 `VITE_DEV_DIST_DIR`。
+> 直接写入思源空间下，可通过思源的同步功能直接同步至其他设备，而软链接的方式则不会参与同步。
+> 
+> 本模板不提供软链接的具体内容，相关内容可参考 [plugin-sample-vite-svelte](https://github.com/siyuan-note/plugin-sample-vite-svelte)。
+> 
 
 
 5. 使用 `pnpm dev` 启动项目，看到类似下面的内容表示构建成功
@@ -44,7 +53,6 @@
   mode=> production
   env=> {
     VITE_SIYUAN_WORKSPACE_PATH: '/path/to/siyuan/workspace',
-    VITE_DEV_DIST_DIR: ''
   }
 
   Siyuan workspace path is set:

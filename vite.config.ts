@@ -21,7 +21,6 @@ export default defineConfig(({
   const env = loadEnv(mode, process.cwd())
   const {
     VITE_SIYUAN_WORKSPACE_PATH,
-    VITE_DEV_DIST_DIR,
   } = env
   console.log('env=>', env)
 
@@ -33,10 +32,6 @@ export default defineConfig(({
   } else {
     console.log(`\nSiyuan workspace path is set:\n${siyuanWorkspacePath}`)
     devDistDir = `${siyuanWorkspacePath}/data/plugins/${pluginInfo.name}`
-  }
-  if (VITE_DEV_DIST_DIR) {
-    console.log(`\nDev dist dir is set:\n${VITE_DEV_DIST_DIR}`)
-    devDistDir = VITE_DEV_DIST_DIR
   }
   console.log(`\nPlugin will build to:\n${devDistDir}`)
 
