@@ -34,9 +34,42 @@
 > 设置 `VITE_DEV_DIST_DIR` 为任意文件夹，然后使用 `软链接` 链接 `siyuan_workspace/data/plugins/your_plugin_name` 目录到 `VITE_DEV_DIST_DIR`。
 
 
-5. 使用 `pnpm dev` 启动项目。
+5. 使用 `pnpm dev` 启动项目，看到类似下面的内容表示构建成功
 
-   如果成功了，你将会在 `思源 - 设置 - 集市` 中看到名为 `plugin-sample-vite-vue` 的插件。
+  ```
+
+  > plugin-sample-vite-vue@0.0.1 dev /path/to/your/plugin-sample-vite-vue
+  > vite build --watch
+
+  mode=> production
+  env=> {
+    VITE_SIYUAN_WORKSPACE_PATH: '/path/to/siyuan/workspace',
+    VITE_DEV_DIST_DIR: ''
+  }
+
+  Siyuan workspace path is set:
+  /path/to/siyuan/workspace
+
+  Plugin will build to:
+  # ✅ 插件将会构建至下面的位置
+  /path/to/siyuan/workspace/data/plugins/plugin-sample-vite-vue
+
+  isWatch=> true
+  distDir=> /path/to/siyuan/workspace/data/plugins/plugin-sample-vite-vue
+  vite v6.3.5 building for production...
+
+  watching for file changes...
+
+  build started...
+  ✓ 26 modules transformed.
+  rendering chunks (1)...LiveReload enabled
+  ../../Siyuan-plugin/data/plugins/plugin-sample-vite-vue/index.css    1.08 kB │ gzip:  0.41 kB
+  ../../Siyuan-plugin/data/plugins/plugin-sample-vite-vue/index.js   198.60 kB │ gzip: 46.59 kB
+  [vite-plugin-static-copy] Copied 7 items.
+  built in 502ms.
+  ```
+
+   刷新思源，你将会在 `思源 - 设置 - 集市` 中看到名为 `plugin-sample-vite-vue` 的插件。
    
 6. 启用插件, 并检查 `App.vue` 文件进行开发。
 
