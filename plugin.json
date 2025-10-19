@@ -4,6 +4,7 @@
   "url": "https://github.com/Wetoria/plugin-sample-vite-vue",
   "version": "0.0.1",
   "minAppVersion": "2.10.14",
+  "disabledInPublish": true,
   "backends": [
     "all"
   ],
