@@ -88,6 +88,11 @@
 >
 > 更多的插件代码案例，请查看： [siyuan/plugin-sample/src/index.ts](https://github.com/siyuan-note/plugin-sample/blob/main/src/index.ts)
 
+## 集市包资源
+
+`plugin.json` 中可选的 `icon` 和 `preview` 字段用于声明包根目录下的图片文件名。支持 PNG、JPEG、WebP 和 AVIF，不支持 SVG；图标最大 64 KiB，预览图最大 512 KiB。不需要图片时，请删除对应字段及传统文件 `icon.png` 或 `preview.png`，字段值不能为空字符串。
+
+README 相对图片存在于 `package.zip` 时从本地加载，否则在线集市会回退到对应的 GitHub Release。本模板会打包 `asset/*`，确保 README 图片可离线显示。带标签的赞助链接可通过包含 `label` 和 `url` 的 `funding.links` 声明，原有 `funding.custom` 仍然兼容。
 
 
 ## 上架集市
@@ -114,17 +119,17 @@
 ![img](./asset/action.png)
 
 2. 需要发布版本的时候，push 一个格式为 `v*` 的 tag，github 就会自动打包发布 release（包括 package.zip）
-3. 默认使用保守策略进行 pre-release 发布，如果觉得没有必要，可以更改 release.yml 中的设置：
+3. 工作流会创建正式 Release，因为集市读取 GitHub Latest Release，不会读取预发布版本：
 
 ```yaml
 - name: Release
     uses: ncipollo/release-action@v1
-    with.
+    with:
         allowUpdates: true
         artifactErrorsFailBuild: true
         artifacts: 'package.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
-        prerelease: true # change this to false
+        prerelease: false
 ```
 
 ### 手动发布

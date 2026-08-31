@@ -1,7 +1,7 @@
 {
   "name": "plugin-sample-vite-vue",
   "author": "wetoria",
-  "url": "https://github.com/Wetoria/plugin-sample-vite-vue",
+  "url": "https://github.com/siyuan-note/plugin-sample-vite-vue",
   "version": "0.0.1",
   "minAppVersion": "2.10.14",
   "disabledInPublish": true,
@@ -26,6 +26,8 @@
     "en_US": "README.md",
     "zh_CN": "README_zh_CN.md"
   },
+  "icon": "icon.png",
+  "preview": "preview.png",
   "funding": {
     "custom": []
   },

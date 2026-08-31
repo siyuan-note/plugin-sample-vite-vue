@@ -87,6 +87,11 @@
 >
 > More plugin code examples, please check [siyuan/plugin-sample/src/index.ts](https://github.com/siyuan-note/plugin-sample/blob/main/src/index.ts)
 
+## Marketplace package resources
+
+The optional `icon` and `preview` fields in `plugin.json` declare image filenames at the package root. PNG, JPEG, WebP, and AVIF are supported; SVG is unsupported. Icons are limited to 64 KiB and previews to 512 KiB. To omit an image, remove its field and the legacy `icon.png` or `preview.png`; an empty field value is invalid.
+
+Relative README images are loaded from `package.zip` when present; otherwise the online marketplace falls back to the matching GitHub Release. This template packages `asset/*` so its README images remain available offline. Labeled sponsorship links can be declared with `funding.links` entries containing `label` and `url`; `funding.custom` remains compatible.
 
 
 ## List on the Marketplace
@@ -111,17 +116,17 @@ The github action is included in this sample, you can use it to publish your new
 ![img](./asset/action.png)
 
 2. Push a tag in the format `v*` and github will automatically create a new release with new bulit package.zip
-3. By default, it will only publish a pre-release, if you don't think this is necessary, change the settings in release.yml
+3. The workflow publishes a regular Release because the marketplace reads GitHub's Latest Release and ignores pre-releases.
 
 ```yaml
 - name: Release
     uses: ncipollo/release-action@v1
-    with.
+    with:
         allowUpdates: true
         artifactErrorsFailBuild: true
         artifacts: 'package.zip'
         token: ${{ secrets.GITHUB_TOKEN }}
-        prerelease: true # change this to false
+        prerelease: false
 ```
 
 ### Manual
