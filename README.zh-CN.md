@@ -1,4 +1,4 @@
-# Siyuan Plugin Template - Vite & Vue3
+# 思源笔记插件示例 - Vite & Vue3
 
 [English](./README.md)
 
@@ -15,7 +15,7 @@
 
 ## 开始
 
-1. 通过 `Use the template` 按钮，以该仓库为模板创建你自己的项目。
+1. 通过 `Use this template` 按钮，以该仓库为模板创建你自己的项目
 > [!WARNING]
 >
 > 请注意库名和插件名称一致，默认分支必须为 `main`.
@@ -24,7 +24,7 @@
 >
 > 初次尝试，请不要修改任何内容，直接通过下述方式，成功在思源里加载插件模板以后，再进行调整。
 >
-> 例如删除 README_zh_CN.md 也会导致插件加载不成功。
+> 例如，重命名 README.zh-CN.md 时，需要同步修改 `plugin.json` 的 `readme` 字段和文档链接。
 
 
 2. 使用 `git clone` 克隆创建好的仓库。
@@ -139,17 +139,10 @@ README 相对图片存在于 `package.zip` 时从本地加载，否则在线集�
 3. 上传 package.zip 作为二进制附件
 4. 提交发布
 
-> [!NOTE]
-> 
-> 如果是第一次发布版本，还需要创建一个 PR 到 [Community Bazaar](https://github.com/siyuan-note/bazaar)  社区集市仓库，修改该库的 plugins.json。该文件是所有社区插件库的索引，格式为：
+首次发布时，请 Fork [社区集市仓库](https://github.com/siyuan-note/bazaar)，在根目录的 `plugins.txt` 中新增一行 `owner/repo`，然后向 `main` 分支提交 PR。每行一个仓库，不添加逗号或空行；每个新增包 PR 只添加一个包。完整流程和审核规则请参阅[提交集市包](https://github.com/siyuan-note/bazaar/blob/main/README.zh-CN.md#提交集市包)。
 
-```json
-{
-  "repos": [
-    "username/reponame"
-  ]
-}
-```
+PR 合并后，集市会自动更新索引。后续更新只需提升清单中的 `version` 并发布包含 `package.zip` 的正式 GitHub Release，无需再次提交上架 PR。更新时效和排错方法请参阅[更新集市包](https://github.com/siyuan-note/bazaar/blob/main/README.zh-CN.md#更新集市包)，部署状态可在 [Stage 工作流](https://github.com/siyuan-note/bazaar/actions/workflows/stage.yml) 查看。
+
 
 ---
 

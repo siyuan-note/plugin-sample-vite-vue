@@ -13,18 +13,18 @@
   ],
   "displayName": {
     "default": "plugin-sample-vite-vue",
-    "en_US": "plugin-sample-vite-vue",
-    "zh_CN": "plugin-sample-vite-vue"
+    "en": "plugin-sample-vite-vue",
+    "zh-CN": "plugin-sample-vite-vue"
   },
   "description": {
     "default": "plugin-sample-vite-vue",
-    "en_US": "plugin-sample-vite-vue",
-    "zh_CN": "plugin-sample-vite-vue"
+    "en": "plugin-sample-vite-vue",
+    "zh-CN": "plugin-sample-vite-vue"
   },
   "readme": {
     "default": "README.md",
-    "en_US": "README.md",
-    "zh_CN": "README_zh_CN.md"
+    "en": "README.md",
+    "zh-CN": "README.zh-CN.md"
   },
   "icon": "icon.png",
   "preview": "preview.png",

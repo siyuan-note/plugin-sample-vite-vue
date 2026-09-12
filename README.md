@@ -1,6 +1,6 @@
-# Siyuan Plugin Template - Vite & Vue3
+# SiYuan Plugin Template - Vite & Vue3
 
-[简体中文](./README_zh_CN.md)
+[简体中文](./README.zh-CN.md)
 
 > Consistent with [siyuan/plugin-sample](https://github.com/siyuan-note/plugin-sample).
 
@@ -17,11 +17,11 @@
 >
 > For your first attempt, please do not modify anything. Load the plugin template in Siyuan as described below before making any changes.
 >
-> For example, deleting README_zh_CN.md will also cause the plugin to fail to load.
+> For example, when renaming README.zh-CN.md, update the `readme` field in `plugin.json` and the documentation links to match.
 
 ## Get started
 
-1. Use the `Use the template` button to make a copy of this repo as template.  
+1. Use the `Use this template` button to make a copy of this repo as a template
 > [!WARNING]
 >
 > That the repository name should match the plugin name, and the default branch must be `main`.
@@ -136,16 +136,10 @@ The github action is included in this sample, you can use it to publish your new
 3. Upload the file package.zip as binary attachments
 4. Publish the release
 
-> [!NOTE]
-> If it is the first release, please create a pull request to the [Community Bazaar](https://github.com/siyuan-note/bazaar) repository and modify the plugins.json file in it. This file is the index of all community plugin repositories, the format is:
+For the first release, fork the [community bazaar repository](https://github.com/siyuan-note/bazaar), add one `owner/repo` line to `plugins.txt` in its root, and open a PR against `main`. Use one repository per line without commas or empty lines, and add only one new package per PR. See [Submitting a bazaar package](https://github.com/siyuan-note/bazaar#submitting-a-bazaar-package) for the full process and review rules.
 
-```json
-{
-  "repos": [
-    "username/reponame"
-  ]
-}
-```
+After the PR is merged, the bazaar updates its index automatically. For subsequent updates, increase `version` in the package manifest and publish a regular GitHub Release containing `package.zip`; no additional listing PR is needed. See [Updating a bazaar package](https://github.com/siyuan-note/bazaar#updating-a-bazaar-package) for update timing and troubleshooting, and check deployment status in the [Stage workflow](https://github.com/siyuan-note/bazaar/actions/workflows/stage.yml).
+
 
 ---
 
